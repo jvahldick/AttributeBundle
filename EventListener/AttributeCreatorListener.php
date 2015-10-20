@@ -51,10 +51,11 @@ class AttributeCreatorListener
             ->setParameter('main', $entity)
         ;
 
-        $definitions = $qb->getQuery()->getArrayResult();
+        $definitions = $qb->getQuery()->getScalarResult();
+        $ids = array_map('current', $definitions);
 
         foreach ($schema->getDefinitions() as $definition) {
-            if (!array_key_exists($definition->getId(), $definitions)) {
+            if (!in_array($definition->getId(), $ids)) {
                 $attribute = new Attribute();
                 $attribute->setDefinition($definition);
 
