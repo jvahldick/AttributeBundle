@@ -40,7 +40,7 @@ class SyncSchemaCommandTest extends WebTestCase
         $commandTester = new CommandTester($command);
 
         // FIRST PASS
-        $commandTester->execute(['command' => $command->getName()]);
+        $commandTester->execute(array('command' => $command->getName()));
 
         $output = <<<OUTPUT
 +-----------+------------------------------------------------+
@@ -53,7 +53,7 @@ OUTPUT;
         $this->assertSame(str_replace(PHP_EOL, "\n", $output), $commandTester->getDisplay(true));
 
         // SECOND PASS
-        $commandTester->execute(['command' => $command->getName()]);
+        $commandTester->execute(array('command' => $command->getName()));
 
         $output = <<<OUTPUT
 +-----------+------------------------------------------------+

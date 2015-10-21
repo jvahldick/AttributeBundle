@@ -8,9 +8,9 @@ class Padam87AttributeExtensionTest extends AbstractExtensionTestCase
 {
     protected function getContainerExtensions()
     {
-        return [
+        return array(
             new Padam87AttributeExtension(),
-        ];
+        );
     }
 
     public function testLoad()
@@ -20,12 +20,12 @@ class Padam87AttributeExtensionTest extends AbstractExtensionTestCase
         $this->assertContainerBuilderHasServiceDefinitionWithTag(
             'attribute.attribute_creator',
             'doctrine.event_listener',
-            ['event' => 'postLoad']
+            array('event' => 'postLoad')
         );
         $this->assertContainerBuilderHasServiceDefinitionWithTag(
             'form.type.attributeCollection',
             'form.type',
-            ['alias' => 'attributeCollection']
+            array('alias' => 'attributeCollection')
         );
     }
 }

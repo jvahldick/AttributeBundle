@@ -10,8 +10,8 @@ class CompleteAttributeType extends AttributeType
     {
         parent::buildForm($builder, $options);
 
-        $builder->add('definition', new DefinitionType(), [
+        $builder->add('definition', new DefinitionType(), array(
 
-        ]);
+        ));
     }
 }

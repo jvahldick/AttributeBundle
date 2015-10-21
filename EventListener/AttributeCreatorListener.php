@@ -32,9 +32,9 @@ class AttributeCreatorListener
         }
 
         /** @var Schema $schema */
-        $schema = $em->getRepository('Padam87AttributeBundle:Schema')->findOneBy([
+        $schema = $em->getRepository('Padam87AttributeBundle:Schema')->findOneBy(array(
             'className' => $classname,
-        ]);
+        ));
 
         if ($schema === null) {
             throw new \UnexpectedValueException('Schema not found for ' . $classname);

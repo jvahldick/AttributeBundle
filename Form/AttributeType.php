@@ -17,9 +17,9 @@ class AttributeType extends AbstractType
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        $resolver->setDefaults([
+        $resolver->setDefaults(array(
             'data_class' => 'Padam87\AttributeBundle\Entity\Attribute',
-        ]);
+        ));
     }
 
     public function getName()

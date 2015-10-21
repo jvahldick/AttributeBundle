@@ -7,12 +7,12 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
-        return [
+        return array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
 
             new Padam87\AttributeBundle\Padam87AttributeBundle(),
-        ];
+        );
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)

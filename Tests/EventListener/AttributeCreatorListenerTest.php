@@ -69,7 +69,7 @@ class AttributeCreatorListenerTest extends WebTestCase
         $em->persist($subscriber);
         $em->flush($subscriber);
 
-        $profiler->queries = []; // reset the profiler to show oly relevant queries
+        $profiler->queries = array(); // reset the profiler to show oly relevant queries
 
         $em->refresh($subscriber);
         
@@ -94,7 +94,7 @@ class AttributeCreatorListenerTest extends WebTestCase
         $subscriber->setName('test');
         $em->flush($subscriber);
 
-        $profiler->queries = []; // reset the profiler to show oly relevant queries
+        $profiler->queries = array(); // reset the profiler to show oly relevant queries
 
         $em->refresh($subscriber);
 

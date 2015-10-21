@@ -10,19 +10,19 @@ class SchemaType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('definitions', 'collection', [
+        $builder->add('definitions', 'collection', array(
             'type' => new DefinitionType(),
             'allow_add' => true,
             'allow_delete' => true,
             'by_reference' => false,
-        ]);
+        ));
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        $resolver->setDefaults([
+        $resolver->setDefaults(array(
             'data_class' => 'Padam87\AttributeBundle\Entity\Schema',
-        ]);
+        ));
     }
 
     public function getName()

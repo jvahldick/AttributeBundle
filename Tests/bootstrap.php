@@ -12,10 +12,10 @@ if (!is_file($autoloadFile = $vendorDir . '/autoload.php')) {
 require $autoloadFile;
 
 AnnotationRegistry::registerAutoloadNamespaces(
-    [
+    array(
         'Doctrine\ORM\Mapping' => $vendorDir . '/doctrine/orm/lib/',
         'Symfony\Component\Validator\Constraints' => $vendorDir . '/symfony/symfony/src',
         'JMS\DiExtraBundle\Annotation' => $vendorDir . '/jms/di-extra-bundle',
-    ]
+    )
 );
 AnnotationRegistry::registerFile($rootDir . '/Entity.php');

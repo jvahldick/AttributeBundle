@@ -56,7 +56,7 @@ class EntityAnnotationCacheWarmer implements CacheWarmerInterface
 
     protected function getEntities()
     {
-        $entities = [];
+        $entities = array();
 
         $reader = new AnnotationReader();
 
@@ -81,7 +81,7 @@ class EntityAnnotationCacheWarmer implements CacheWarmerInterface
      */
     protected function getResources()
     {
-        $res = [];
+        $res = array();
 
         /** @var ClassMetadata $m */
         foreach ($this->getMetadata() as $m) {
